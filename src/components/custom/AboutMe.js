@@ -1,17 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native'; // TODO: replace Text with ui/Text after export
+import { View } from 'react-native';
+import { Text } from '../ui';
 import { styles } from '../../styles/styles';
 
-/**
- * Custom/AboutMe
- * Shows name and registration number at the top.
- * Props: name (string), regNo (string)
- */
-export default function AboutMe({ name, regNo }) {
+const AboutMe = ({ name, regNo }) => {
   return (
-    <View style={styles.header}>
-      <Text style={styles.headerText}>{name}</Text>
-      <Text style={styles.headerText}>{regNo}</Text>
+    <View style={styles.aboutCard}>
+      <Text style={styles.aboutTitle}>About Me</Text>
+      <Text style={styles.aboutText}>👩‍💻 Name: {name}</Text>
+      <Text style={styles.aboutText}>🆔 Reg No: {regNo}</Text>
+      <Text style={styles.aboutText}>🎓 Department: Computer Science</Text>
+      <Text style={styles.aboutText}>🏫 COMSATS University Islamabad, Attock Campus</Text>
     </View>
   );
-}
+};
+
+export default AboutMe;
